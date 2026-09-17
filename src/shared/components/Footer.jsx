@@ -11,12 +11,12 @@ const Footer = () => {
                         to="/"
                         className="text-lg font-bold text-white"
                     >
-                        Movie<span className="text-red-500">Explorer</span>
+                        Movie<span className="text-red-500">Freak</span>
                     </Link>
 
                     {/* Copyright */}
                     <p className="text-center text-sm text-slate-500">
-                        © 2026 MovieExplorer. All rights reserved.
+                        © 2026 MovieFreak. All rights reserved.
                     </p>
 
                     {/* Social Links */}
