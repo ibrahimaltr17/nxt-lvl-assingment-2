@@ -66,7 +66,7 @@ const AllMovies = () => {
             <p className="mt-2 text-sm text-gray-500">Try searching with a different title.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4 xl:grid-cols-5">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4 xl:grid-cols-5">
             {movies.map((movie) => (
               <MovieCard key={movie.id} movie={movie} onSeeDetails={handleSeeDetails} />
             ))}
