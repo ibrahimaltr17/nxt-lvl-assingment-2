@@ -1,7 +1,8 @@
 import { FaCalendarAlt, FaStar } from "react-icons/fa";
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, onSeeDetails }) => {
   const { name, image, premiered, rating } = movie;
+
   return (
     <div className="overflow-hidden rounded-lg border border-white/10 bg-slate-900">
       <div className="h-64 overflow-hidden">
@@ -13,10 +14,11 @@ const MovieCard = ({ movie }) => {
           <span className="flex items-center gap-1"><FaStar className="text-yellow-400" />{rating?.average || "N/A"}</span>
           <span className="flex items-center gap-1"><FaCalendarAlt />{premiered ? premiered.slice(0, 4) : "N/A"}</span>
         </div>
-        <button className="w-full rounded-md bg-white px-3 py-1.5 text-xs font-medium text-slate-900 transition hover:bg-slate-200">See Details</button>
+        <button onClick={() => onSeeDetails(movie)} className="w-full rounded-md bg-red-600 px-3 py-1.5 text-xs font-medium text-white transition hover:bg-red-700">See Details</button>
       </div>
     </div>
   );
 };
 
 export default MovieCard;
+
